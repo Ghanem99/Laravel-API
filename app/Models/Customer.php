@@ -4,13 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use app\Models\Inovice;
+use app\Models\Invoice;
 
 class Customer extends Model
 {
     use HasFactory;
 
     public function invoice() {
-        return $this-hasMany(Inovice::class);
+        return $this-hasMany(Invoice::class);
     }
 }
