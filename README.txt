@@ -1,0 +1,1 @@
+This is a basic Laravel API project that serves as a starting point for building robust and scalable API applications. The project follows modern software development practices and leverages the power of Laravel framework to provide a solid foundation for building RESTful APIs.
