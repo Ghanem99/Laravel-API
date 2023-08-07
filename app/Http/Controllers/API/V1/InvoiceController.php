@@ -2,20 +2,23 @@
 
 namespace App\Http\Controllers\API\V1;
 
-use App\Models\Inovice;
-use App\Http\Requests\StoreInoviceRequest;
-use App\Http\Requests\UpdateInoviceRequest;
+use App\Models\Invoice;
+use App\Http\Requests\StoreInvoiceRequest;
+use App\Http\Requests\UpdateInvoiceRequest;
 use App\Http\Controllers\Controller;
 
+use App\Http\Resources\V1\InvoiceResource;
+use App\Http\Resources\V1\InvoiceCollection;
 
-class InoviceController extends Controller
+
+class InvoiceController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return new InvoiceCollection(Invoice::paginate());
     }
 
     /**
@@ -29,7 +32,7 @@ class InoviceController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreInoviceRequest $request)
+    public function store(StoreInvoiceRequest $request)
     {
         //
     }
@@ -37,15 +40,15 @@ class InoviceController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Inovice $inovice)
+    public function show(Invoice $invoice)
     {
-        //
+        return new InvoiceResource($invoice);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Inovice $inovice)
+    public function edit(Invoice $Invoice)
     {
         //
     }
@@ -53,7 +56,7 @@ class InoviceController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateInoviceRequest $request, Inovice $inovice)
+    public function update(UpdateInvoiceRequest $request, Invoice $Invoice)
     {
         //
     }
@@ -61,7 +64,7 @@ class InoviceController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Inovice $inovice)
+    public function destroy(Invoice $Invoice)
     {
         //
     }
