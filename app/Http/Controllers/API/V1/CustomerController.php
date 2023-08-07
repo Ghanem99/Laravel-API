@@ -1,19 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API\V1;
 
-use App\Models\Inovice;
-use App\Http\Requests\StoreInoviceRequest;
-use App\Http\Requests\UpdateInoviceRequest;
+use App\Models\Customer;
+use App\Http\Requests\StoreCustomerRequest;
+use App\Http\Requests\UpdateCustomerRequest;
+use App\Http\Controllers\Controller;
 
-class InoviceController extends Controller
+class CustomerController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return Customer::all();
     }
 
     /**
@@ -27,7 +28,7 @@ class InoviceController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreInoviceRequest $request)
+    public function store(StoreCustomerRequest $request)
     {
         //
     }
@@ -35,7 +36,7 @@ class InoviceController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Inovice $inovice)
+    public function show(Customer $customer)
     {
         //
     }
@@ -43,7 +44,7 @@ class InoviceController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Inovice $inovice)
+    public function edit(Customer $customer)
     {
         //
     }
@@ -51,7 +52,7 @@ class InoviceController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateInoviceRequest $request, Inovice $inovice)
+    public function update(UpdateCustomerRequest $request, Customer $customer)
     {
         //
     }
@@ -59,7 +60,7 @@ class InoviceController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Inovice $inovice)
+    public function destroy(Customer $customer)
     {
         //
     }
